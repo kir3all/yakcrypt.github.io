@@ -4,26 +4,43 @@
         <title>winsite</title>
         <meta charset="utf-8">
         <meta name="description" content="Единственный сайт, не поставленный на учет в Соединенных Штатах Америки.">
+        <link rel="stylesheet" type="text/css" href="css/toggle.css">
     </head>
     <body>
+        <script type="text/javascript" src="js/lang.js"></script>
         <div>
-            <div>
-                <h1>Welcome to my site!</h1>
+            <div class="lang-switcher">
+                <div class="EN">English</div>
+                <div class="RU">Английский</div>
+                <label class="checkbox-ios switch">
+                    <input type="checkbox" onclick="switchLang(this.checked);" id="language">
+                    <span class="checkbox-ios-switch"></span>
+                </label>
+                <div class="EN">Russian</div>
+                <div class="RU">Русский</div>
             </div>
             <div>
-               <img src="image/REMI.jpg" alt="kartinka remi"> 
-                <p>Star Trek is an American science fiction media franchise originating from the 1960s television series Star Trek, created by Gene Roddenberry. That series, now often known as "The Original Series", debuted on September 8, 1966, and aired for three seasons on NBC. </p>
-                <p>Several parodies have been made of Star Trek. In addition, viewers have produced several fan productions.</p>
-                <p>Star Trek has been a cult phenomenon for decades. Fans of the franchise are called "Trekkies" or "Trekkers". The franchise spans a wide range of spin-offs including games, figurines, novels, toys, and comics.</p>
+                <h1 class="EN">Welcome to my site!</h1>
+                <h1 class="RU">Добро пожаловать на мой сайт!</h1>
+                <div>
+                    <img src="image/REMI.jpg" alt="kartinka remi"> 
+                    <p class="EN">Star Trek is an American science fiction media franchise originating from the 1960s television series Star Trek, created by Gene Roddenberry. That series, now often known as "The Original Series", debuted on September 8, 1966, and aired for three seasons on NBC. </p>
+                    <p class="RU">«Звездный путь» - американская научно-фантастическая медиа-франшиза, берущая начало в телесериале «Звездный путь» 1960-х годов, созданном Джином Родденберри. Этот сериал, ныне известный как «Оригинальный сериал», дебютировал 8 сентября 1966 года и транслировался в течение трех сезонов на NBC. </p>
+                    <p class="EN">Several parodies have been made of Star Trek. In addition, viewers have produced several fan productions.</p>
+                    <p class="RU">На «Звездный путь» было сделано несколько пародий. Кроме того, зрители сняли несколько фанатских постановок.</p>
+                    <p class="EN">Star Trek has been a cult phenomenon for decades. Fans of the franchise are called "Trekkies" or "Trekkers". The franchise spans a wide range of spin-offs including games, figurines, novels, toys, and comics.</p>
+                    <p class="RU">Звездный путь был культовым явлением на протяжении десятилетий. Поклонников франшизы называют «Trekkies» или «Trekkers». Франшиза охватывает широкий спектр дополнительных доходов, включая игры, фигурки, романы, игрушки и комиксы.</p>
+                </div>
             </div>
             <div>
-                <form action="javascript:alert(message.value);">
+                <form action="javascript:window.open('mailto:me.kyakovenko@ya.ru?subject=New&body='+message.value);">
                     <input type="text" id="message" value="">
                     <input type="submit">
                 </form>
             </div>
             <div>
-                <a href="https://www.youtube.com/c/Winsight">сделано с любовью, подпишись</a>
+                <a class="EN" href="https://www.youtube.com/c/Winsight">made with love, subscribe</a>
+                <a class="RU" href="https://www.youtube.com/c/Winsight">сделано с любовью, подпишись на автора</a>
             </div>
         </div>
     </body>
